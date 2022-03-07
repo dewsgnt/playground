@@ -8,14 +8,15 @@ import (
 
 func Fibonacci(n int) int {
 	if n <= 1 {
-		return 0
+		return n
 	}
-	prev := 0
-	curr := 1
-	for i := 0; i < n-2; i++ {
-		prev, curr = curr, prev+curr
-	}
-	return curr
+	return Fibonacci(n-1)+ Fibonacci(n-2)
+	// prev := 0
+	// curr := 1
+	// for i := 0; i < n-2; i++ {
+	// 	prev, curr = curr, prev+curr
+	// }
+	// return curr
 }
 
 func main() {
